@@ -10,7 +10,6 @@ RUN unzip -qq /gae/appengine-java-sdk-1.9.42.zip -d /gae && rm /gae/appengine-ja
 ENV PATH $PATH:/gae/appengine-java-sdk-1.9.42/bin/
 
 # Expose ports
-EXPOSE 8000
 EXPOSE 8080
 
 # Set the working directory and the entry point
