@@ -1,4 +1,4 @@
-FROM java:7
+FROM openjdk:7
 
 # Install unzip
 RUN apt-get -qq update
@@ -6,7 +6,7 @@ RUN apt-get -qq install unzip
 
 # Install Appengine Java SDK
 ADD https://storage.googleapis.com/appengine-sdks/featured/appengine-java-sdk-1.9.42.zip /gae/
-RUN unzip -qq /gae/appengine-java-sdk-1.9.42.zip -d /gae
+RUN unzip -qq /gae/appengine-java-sdk-1.9.42.zip -d /gae && rm /gae/appengine-java-sdk-1.9.42.zip
 ENV PATH $PATH:/gae/appengine-java-sdk-1.9.42/bin/
 
 # Expose ports
